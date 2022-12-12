@@ -208,11 +208,6 @@ template {
 
   /** HEADER **/
   --header-padding: 4rem 0 0;
-  --header-logo-position: relative;
-  --header-logo-link-display: inline-block;
-  --header-logo-link-position: absolute;
-  --header-logo-link-top: -1rem;
-  --header-logo-link-left: 0;
 
   /** FOOTER **/
   --footer-padding: 5rem 0 1rem;
@@ -353,15 +348,11 @@ ul.row {
 }
 
 .col-1-2 {
-  width: calc((100% / 3) - 2rem);
+  width: calc((100% / 2) - 2rem);
 }
 
 /* Navbar
       ============================= */
-
-.navbar-menu {
-  float: right;
-}
 
 .nav {
   margin: 0;
@@ -409,22 +400,16 @@ ul.row {
 /* Header
       ============================= */
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header {
   padding: var(--header-padding);
   position: relative;
   z-index: 3;
   background: transparent;
-}
-
-.header-logo {
-  position: var(--header-logo-position);
-}
-
-.header-logo a {
-  display: var(--header-logo-link-display);
-  position: var(--header-logo-link-position);
-  top: var(--header-logo-link-top);
-  left: var(--header-logo-link-left);
 }
 
 /* Footer
