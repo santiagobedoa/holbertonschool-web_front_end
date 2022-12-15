@@ -242,7 +242,7 @@ template {
 }
 
 /* Base
-    ============================= */
+          ============================= */
 
 *,
 *:before,
@@ -318,7 +318,7 @@ a:active {
 }
 
 /* Helpers
-    ============================= */
+          ============================= */
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute !important;
@@ -332,7 +332,7 @@ a:active {
 /*** 2. LAYOUT ***/
 
 /* Layout
-    ============================= */
+          ============================= */
 
 .container {
   width: 960px;
@@ -341,7 +341,7 @@ a:active {
 }
 
 /* Grid
-    ============================= */
+          ============================= */
 
 ul.row {
   margin: -1rem;
@@ -366,7 +366,7 @@ ul.row {
 }
 
 /* Navbar
-    ============================= */
+          ============================= */
 
 .nav {
   margin: 0;
@@ -415,7 +415,7 @@ ul.row {
 }
 
 /* Header
-    ============================= */
+          ============================= */
 
 .header {
   padding: var(--header-padding);
@@ -431,7 +431,7 @@ ul.row {
 }
 
 /* Footer
-    ============================= */
+          ============================= */
 
 .footer {
   --nav-item-font-weight: normal;
@@ -464,7 +464,7 @@ ul.row {
 /*** 3. SECTION ***/
 
 /* Section (all styles)
-    ============================= */
+          ============================= */
 
 .section {
   padding: var(--section-padding);
@@ -501,7 +501,7 @@ ul.row {
 }
 
 /* Section theming
-    ============================= */
+          ============================= */
 
 [data-section-theme="dark"] {
   --button-color: var(--color-white);
@@ -511,7 +511,7 @@ ul.row {
 }
 
 /* Section HERO
-    ============================= */
+          ============================= */
 
 .section-hero {
   position: relative;
@@ -546,21 +546,21 @@ ul.row {
   min-height: 50vh;
 }
 /* Section Latest news
-    ============================= */
+          ============================= */
 
 .section-latest-news .row {
   flex-direction: row-reverse;
 }
 
 /* Section SERVICES
-    ============================= */
+          ============================= */
 
 .section-services .row {
   flex-wrap: wrap;
 }
 
 /* Section ABOUT US
-    ============================= */
+          ============================= */
 
 .section-about-us [class*="col-"] {
   align-self: center;
@@ -569,14 +569,14 @@ ul.row {
 /*** 4. CARD ***/
 
 /* Card (all styles)
-    ============================= */
+          ============================= */
 
 .card-category {
   color: var(--color-primary);
 }
 
 /* Card WORK
-    ============================= */
+          ============================= */
 
 .card-work .card-outer {
   position: relative;
@@ -641,7 +641,7 @@ ul.row {
 }
 
 /* Card SERVICES
-    ============================= */
+          ============================= */
 
 .card-services .card-title {
   margin: 0;
@@ -662,7 +662,7 @@ ul.row {
 }
 
 /* Card TESTIMONIAL
-    ============================= */
+          ============================= */
 
 .card-testimonial {
   text-align: center;
@@ -697,7 +697,7 @@ ul.row {
 /*** ARTICLE PAGE ***/
 
 /* Section HERO (article)
-    ============================= */
+          ============================= */
 
 .hero-article {
   background-size: 150rem 100rem;
@@ -732,7 +732,7 @@ ul.row {
 }
 
 /* Post
-    ============================= */
+          ============================= */
 
 .post {
   display: flex;
@@ -767,7 +767,7 @@ ul.row {
 }
 
 /* Post Meta
-    ============================= */
+          ============================= */
 
 .post-meta-list {
   flex-direction: column;
@@ -794,7 +794,7 @@ ul.row {
 }
 
 /* Tag list
-    ============================= */
+          ============================= */
 
 .tag-list {
   padding: 0;
@@ -830,7 +830,7 @@ ul.row {
 /* Basic form
     ============================= */
 
-.form {
+form {
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
@@ -841,7 +841,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: none;
+  border: 0;
   padding: 0 0 2rem;
 }
 
@@ -929,6 +929,7 @@ textarea:focus {
 
 /* Form error handling
 ============================= */
+
 /* The following code is used to place the icon in the after pseudo element. Because after and before are not possible in an input, we need to use a span that will be positioned on the right of our input. */
 
 input:not(:placeholder-shown) ~ .form-field-icon::after {
