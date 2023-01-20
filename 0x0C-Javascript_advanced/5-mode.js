@@ -1,4 +1,5 @@
-function changeMode(size, weight, background, color) {
+// Private methods with closure
+function changeMode(size, weight, transform, background, color) {
   return () => {
     document.body.style.fontSize = size + "px";
     document.body.style.fontWeight = weight;
@@ -8,7 +9,7 @@ function changeMode(size, weight, background, color) {
   };
 }
 
-const main = () => {
+function main() {
   let spooky = changeMode(9, "bold", "uppercase", "pink", "green");
   let darkMode = changeMode(12, "bold", "capitalize", "black", "white");
   let screamMode = changeMode(12, "normal", "lowercase", "white", "black");
@@ -36,6 +37,8 @@ const main = () => {
   btn.innerHTML = "Scream mode";
   btn.addEventListener("click", screamMode);
   document.body.appendChild(btn);
-};
+}
 
-main();
+document.addEventListener("DOMContentLoaded", function (event) {
+  main();
+});
