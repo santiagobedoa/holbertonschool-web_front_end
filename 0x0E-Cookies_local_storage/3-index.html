@@ -17,14 +17,16 @@
     <script>
       // Create a cookie
       const setCookies = () => {
-        const firstname = document.getElementById("firstname").value;
-        const email = document.getElementById("email").value;
-        let date = new Date();
-        date.setTime(date.getTime() + 10 * 24 * 60 * 60 * 1000);
-        let expires = date.toGTMString();
-
-        document.cookie = `firstname=${firstname}; expires=${expires}`;
-        document.cookie = `email=${email}; expires=${expires}`;
+        let d = new Date();
+        d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 1000);
+        let expires = d.toGMTString();
+        document.cookie = `firstname=${
+          document.getElementById("firstname").value
+        }; expires=${expires}`;
+        document.cookie = `email=${
+          document.getElementById("email").value
+        }; expires=${expires}`;
+        showWelcomeMessageOrForm();
       };
 
       // Get target cookie
