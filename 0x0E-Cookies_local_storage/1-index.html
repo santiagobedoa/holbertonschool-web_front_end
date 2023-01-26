@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic Cookies</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // Create a cookie
+      const setCookies = () => {
+        const firstname = document.getElementById("firstname").value;
+        const email = document.getElementById("email").value;
+        let date = new Date();
+        date.setTime(date.getTime() + 10 * 24 * 60 * 60 * 1000);
+        let expires = date.toGTMString();
+
+        document.cookie = `firstname=${firstname}; expires=${expires}`;
+        document.cookie = `email=${email}; expires=${expires}`;
+      };
+
+      //Show cookies
+      const showCookies = () => {
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let p = document.createElement("p");
+        p.innerText = `Cookies: ${decodedCookie}`;
+        document.body.appendChild(p);
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Login to the website</h1>
+    <form id="log">
+      <input type="text" placeholder="Firstname" id="firstname" required />
+      <input type="text" placeholder="Email" id="email" required />
+      <input type="submit" onclick="setCookies()" value="Log me in" />
+    </form>
+    <h1>Cookies</h1>
+    <button id="btn-show-cookies" onclick="showCookies()">
+      Show the cookies
+    </button>
+  </body>
+</html>
